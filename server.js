@@ -66,3 +66,5 @@ const server = {
     httpsServer.listen(config.httpsPort, () => console.log('Https server listening on port', config.httpsPort));
   },
 };
+
+module.exports = server;

@@ -21,6 +21,6 @@ const environments = {
 const currentEnvironment = typeof(process.env.NODE_ENV) == 'string' ? process.env.NODE_ENV.toLowerCase(): '';
 
 // Determine which environment will be used.
-const environmentToExport =  typeof(environments[currentEnvironment]) == 'object' ? environments[currentEnvironment]: environments.staging;
+const environmentToExport =  environments[currentEnvironment] ? environments[currentEnvironment]: environments.staging;
 
 module.exports = environmentToExport;
